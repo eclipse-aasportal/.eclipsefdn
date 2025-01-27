@@ -15,9 +15,6 @@ orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
       delete_branch_on_merge: false,
       description: "AASPortal project website",
       web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
     },
   ],
 }
