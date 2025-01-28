@@ -9,13 +9,6 @@ orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
     },
   },
   _repositories+:: [
-    orgs.newRepo('aasportal-website') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      description: "AASPortal project website",
-      web_commit_signoff_required: false,
-    },
     orgs.newRepo('aasportal') {
       allow_merge_commit: true,
       allow_update_branch: false,
