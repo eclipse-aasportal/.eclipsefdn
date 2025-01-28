@@ -2,8 +2,8 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
   settings+: {
-    description: "",
-    name: "Eclipse AASPortal project",
+    description: "Eclipse AASPortal",
+    name: "Eclipse AASPortal",
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
     },
@@ -14,6 +14,13 @@ orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "AASPortal project website",
+      web_commit_signoff_required: false,
+    },
+    orgs.newRepo('aasportal') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "AASPortal",
       web_commit_signoff_required: false,
     },
   ],
