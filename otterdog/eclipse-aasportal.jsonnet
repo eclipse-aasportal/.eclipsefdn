@@ -19,14 +19,14 @@ orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
         orgs.newBranchProtectionRule('main') {
           lock_branch: false,
           requires_pull_request: true,
-          requires_code_owner_review: false,
+          requires_code_owner_reviews: false,
           require_last_push_approval: false,
           allows_force_pushes: true,
         },
         orgs.newBranchProtectionRule('staging') {
           lock_branch: false,
           requires_pull_request: true,
-          requires_code_owner_review: false,
+          requires_code_owner_reviews: false,
           require_last_push_approval: false,
           allows_force_pushes: true,
         },
