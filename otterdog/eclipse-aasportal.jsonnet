@@ -15,6 +15,22 @@ orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
       delete_branch_on_merge: false,
       description: "AASPortal",
       web_commit_signoff_required: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          lock_branch: false,
+          requires_pull_request: true,
+          requires_code_owner_review: false,
+          require_last_push_approval: false,
+          allows_force_pushes: true,
+        },
+        orgs.newBranchProtectionRule('staging') {
+          lock_branch: false,
+          requires_pull_request: true,
+          requires_code_owner_review: false,
+          require_last_push_approval: false,
+          allows_force_pushes: true,
+        },
+      ],
     },
   ],
 } + {
