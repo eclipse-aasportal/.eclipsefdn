@@ -5,7 +5,8 @@ orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
     description: "Eclipse AASPortal",
     name: "Eclipse AASPortal",
     workflows+: {
-      actions_can_approve_pull_request_reviews: false,
+      actions_can_approve_pull_request_reviews: true,
+      default_workflow_permissions: "write"
     },
   },
   _repositories+:: [
