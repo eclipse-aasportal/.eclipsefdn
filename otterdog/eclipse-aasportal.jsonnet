@@ -58,19 +58,35 @@ orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
         orgs.newBranchProtectionRule('main') {
           lock_branch: false,
           requires_pull_request: true,
-          requires_code_owner_reviews: false,
-          require_last_push_approval: false
+          bypass_pull_request_allowances: [
+            "@eclipse-aasportal/dt-aasportal-project-leads"
+          ],
+          requires_status_checks: true,
+          required_status_checks: [
+            "build",
+          ]
         },
         orgs.newBranchProtectionRule('development') {
-          required_approving_review_count: 0,
-          requires_strict_status_checks: true,
+          lock_branch: false,
+          requires_pull_request: true,
+          bypass_pull_request_allowances: [
+            "@eclipse-aasportal/dt-aasportal-project-leads"
+          ],
+          requires_status_checks: true,
+          required_status_checks: [
+            "build",
+          ]
         },
         orgs.newBranchProtectionRule('staging') {
           lock_branch: false,
           requires_pull_request: true,
-          requires_code_owner_reviews: false,
-          require_last_push_approval: false,
-          allows_force_pushes: true,
+          bypass_pull_request_allowances: [
+            "@eclipse-aasportal/dt-aasportal-project-leads"
+          ],
+          requires_status_checks: true,
+          required_status_checks: [
+            "build",
+          ]
         },
       ],
     },
