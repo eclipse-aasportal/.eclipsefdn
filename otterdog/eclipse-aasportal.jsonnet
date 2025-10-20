@@ -64,7 +64,7 @@ orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
           ],
           requires_status_checks: true,
           required_status_checks: [
-            "Build and Test",
+            "Build and Test (22.16.0)",
           ]
         },
         orgs.newBranchProtectionRule('development') {
@@ -76,7 +76,7 @@ orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
           ],
           requires_status_checks: true,
           required_status_checks: [
-            "Build and Test",
+            "Build and Test (22.16.0)",
           ]
         },
         orgs.newBranchProtectionRule('staging') {
@@ -88,7 +88,7 @@ orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
           ],
           requires_status_checks: true,
           required_status_checks: [
-            "Build and Test",
+            "Build and Test (22.16.0)",
           ]
         },
       ],
