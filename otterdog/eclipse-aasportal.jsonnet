@@ -13,6 +13,7 @@ orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
     orgs.newRepo('.github') {
     },
     orgs.newRepo('AASPortal') {
+      default_branch: 'main',
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -57,30 +58,24 @@ orgs.newOrg('dt.aasportal', 'eclipse-aasportal') {
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
           lock_branch: false,
-          requires_pull_request: true,
           required_approving_review_count: 0,
           bypass_pull_request_allowances: [
             "@eclipse-aasportal/dt-aasportal-project-leads"
           ],
-          requires_status_checks: true,
         },
         orgs.newBranchProtectionRule('development') {
           lock_branch: false,
-          requires_pull_request: true,
           required_approving_review_count: 0,
           bypass_pull_request_allowances: [
             "@eclipse-aasportal/dt-aasportal-project-leads"
           ],
-          requires_status_checks: true,
         },
         orgs.newBranchProtectionRule('staging') {
           lock_branch: false,
-          requires_pull_request: true,
           required_approving_review_count: 0,
           bypass_pull_request_allowances: [
             "@eclipse-aasportal/dt-aasportal-project-leads"
           ],
-          requires_status_checks: true,
         },
       ],
     },
